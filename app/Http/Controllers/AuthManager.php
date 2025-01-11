@@ -12,6 +12,15 @@ class AuthManager extends Controller
 {
     //
 
+    /**
+     * Check If a user has been logged In
+     * @return bool
+     */
+    public function hasAUserLoggedIn(){
+        
+        return Auth::check();
+    }
+
         /**
      * Summary of home : Display Dashboard
      * @return \Illuminate\Contracts\View\View|\Illuminate\Http\RedirectResponse
