@@ -54,4 +54,18 @@ class User extends Authenticatable
         //dd($data);   
         return self::create($data);
     }
+
+     //Update  User
+     function findUser($id){
+        return self::find($id);
+    }
+
+    //Update  User
+    function updateUser($id,$data){
+        return self::find($id)->update([$data]);
+    }
+    //Delete User
+    function deleteUser($id){
+      return self::find($id)->delete();
+    }
 }
