@@ -21,13 +21,27 @@ Route::get('/dashboard', [PasswordManagerController::class, 'dashboard'])->name(
 //Password
 
 Route::get('/newpassword', [PasswordManagerController::class, 'newPassword'])->name('newpassword');
+Route::get('/createcategory', [PasswordManagerController::class, 'create'])->name('category.create');
 Route::post('/savepassword', [PasswordManagerController::class, 'savePassword'])->name('savepassword');
+Route::get('/password/{id}', [PasswordManagerController::class, 'readPassword'])->name('readpassword');
 Route::get('/editpassword/{id}', [PasswordManagerController::class, 'editPassword'])->name('editpassword');
 Route::post('/updatepassword/{id}', [PasswordManagerController::class, 'updatepassword'])->name('updatepassword');
-Route::get('/deletepassword/{id}', [PasswordManagerController::class, 'deletepassword'])->name('deletepassword');
+Route::delete('/deletepassword/{id}', [PasswordManagerController::class, 'deletepassword'])->name('deletepassword');
 
-Route::get('/createcategory', [PasswordManagerController::class, 'create'])->name('category.create');
-Route::post('/savecategory', [PasswordCategoryController::class, 'store'])->name('category.save');
+
+
+
+
+Route::get('/category/create', [PasswordCategoryController::class, 'showForm']); // Route to display form
+Route::post('/category/save', [PasswordCategoryController::class, 'storeData'])->name('store.data'); // Route to handle form submission
+Route::get('/category/{id}', [PasswordCategoryController::class, 'readData']);
+Route::get('/category/edit/{id}', [PasswordCategoryController::class, 'editData']);
+Route::post('/category/update/{id}', [PasswordCategoryController::class, 'storeData'])->name('store.update');
+Route::delete('/deletecategory/{id}', [PasswordCategoryController::class, 'deletecategory']);
+
+//Route::post('/savecategory', [PasswordCategoryController::class, 'store'])->name('category.save');
+
+
 
 
 //Route::get('/category', [PasswordCategoryController::class, 'create'])->name('category');
@@ -35,7 +49,6 @@ Route::post('/savecategory', [PasswordCategoryController::class, 'store'])->name
 
 
 //Route::get('/selectpwd/{id}', [PasswordManagerController::class, 'selectpassword'])->name('seepassword');
-//Route::get('/password/{id}', [PasswordManagerController::class, 'readPassword'])->name('readpassword');
 
 //
 //Password Category
