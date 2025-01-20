@@ -36,8 +36,12 @@ Route::get('/category/create', [PasswordCategoryController::class, 'showForm']);
 Route::post('/category/save', [PasswordCategoryController::class, 'storeData'])->name('store.data'); // Route to handle form submission
 Route::get('/category/{id}', [PasswordCategoryController::class, 'readData']);
 Route::get('/category/edit/{id}', [PasswordCategoryController::class, 'editData']);
-Route::post('/category/update/{id}', [PasswordCategoryController::class, 'storeData'])->name('store.update');
-Route::delete('/deletecategory/{id}', [PasswordCategoryController::class, 'deletecategory']);
+Route::post('/category/update/{id}', [PasswordCategoryController::class, 'updateData'])->name('store.update');
+//Route::delete('/deletecategory/{id}', [PasswordCategoryController::class, 'deletecategory']);
+
+Route::delete('/category/delete/{id}', [PasswordCategoryController::class, 'destroy'])->name('categories.destroy');
+
+
 
 //Route::post('/savecategory', [PasswordCategoryController::class, 'store'])->name('category.save');
 

@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
-use App\Models\PasswordCategories;
 use App\Models\Passwords;
+use App\Models\PasswordCategories;
 Use App\Http\Controllers\AuthManager;
 class PasswordManagerController extends Controller
 {   
@@ -27,13 +27,10 @@ class PasswordManagerController extends Controller
             return  redirect(route('home'));
         }
 
-        $passwords =  $PasswordsM->getAllPwdRecords();
-        //$passwordsCategories =  $PasswordsM->getAllPwdRecords();
-       // dd($passwords);
-        //Get All Passwords
-        //Get All PAsswords Categories
-        
-        return view('dashboard');
+        $passwords =  Passwords::all();
+        $categories =  PasswordCategories::all();
+
+        return view('dashboard',["passwords"=>$passwords,"categories"=>$categories]);
 
     }
     /**
@@ -41,6 +38,10 @@ class PasswordManagerController extends Controller
      * @return \Illuminate\Contracts\View\View
      */
     public function  newPassword(){
+        $authManagerC = new AuthManager;
+        if ($authManagerC->hasAUserLoggedIn() === false) {
+            return  redirect(route('home'));
+        }
         return view('passwords.newpassword');
     }
     /**
@@ -50,16 +51,18 @@ class PasswordManagerController extends Controller
     public function  savePassword(Request $request){
 
         $PasswordsM = new Passwords();
-        $request->validate([
+        $validated =  $request->validate([
+            'website'=>'required',
             'username'=>'required',
             'password'=>'required',
             'notes'=>'max:255',
          
         ]);
 
-        $data['username'] = $request->username;
-        $data['password'] = Hash::make($request->password);
-        $data['notes'] = $request->notes;
+        $data['website'] = $validated['website'];
+        $data['username'] = $validated['username'];
+        $data['password'] = Hash::make($validated['password']);
+        $data['notes'] = $validated['notes'];
 
        // dd($data);  
         $newPassword =   $PasswordsM->newPwdRecord($data);
@@ -70,14 +73,9 @@ class PasswordManagerController extends Controller
 
         return  redirect(route('dashboard'))->with('success',", Login to access the application");
     }
-    // public function selectpassword($id){
 
-    //     $PasswordsM = new Passwords();
 
-    //     $pwd = $PasswordsM->newPwdRecord($id);
-    //     return view('home',$pwd);
-    //     //retrieve record from model
-    // }
+
     public function readPassword($id){
         $PasswordsM = new Passwords();
         $selectedPassword = $PasswordsM->findPwdRecord($id);
@@ -96,6 +94,12 @@ class PasswordManagerController extends Controller
 
         $PasswordsM = new Passwords();
 
+        $authManagerC = new AuthManager;
+
+        if ($authManagerC->hasAUserLoggedIn() === false) {
+            return  redirect(route('home'));
+        }
+
         $editSelectPassword = $PasswordsM->findPwdRecord($id);
 
         $data  = $editSelectPassword;
@@ -110,12 +114,13 @@ class PasswordManagerController extends Controller
 
         $PasswordsM = new Passwords();
         $request->validate([
+            'website'=>'required',
             'username'=>'required',
             'password'=>'required',
             'notes'=>'max:255',
          
         ]);
-
+        $data['website'] = $request->website;
         $data['username'] = $request->username;
         $data['password'] = Hash::make($request->password);
         $data['notes'] = $request->notes;
@@ -135,71 +140,20 @@ class PasswordManagerController extends Controller
      * @param mixed $id
      * @return void
      */
-    public function deletepassword($id){}
-    /**
-     * Summary of newPasswordcat
-     * @return \Illuminate\Contracts\View\View
-     */
-    public function  newPasswordcat(){
-          return view('home');
+    public function deletepassword($id){
+
+        $PasswordsM = new Passwords();
+        $Password = $PasswordsM->deletePwdecord($id);
+        return redirect('/dashboard');
     }
-    /**
-     * Summary of savePasswordcat
-     * @return void
-     */
-    public function  savePasswordcat(Request $request){
+    public function  create(){
 
-        $PwdCategoryM = new PasswordCategories();
-        $request->validate([
-            'title'=>'required',
-            'notes'=>'max:255',
-         
-        ]);
+        $authManagerC = new AuthManager;
 
-        $data['title'] = $request->title;
-        $data['notes'] = $request->notes;
-
-
-        $newPasswordCategory =   $PwdCategoryM->newPasswordCategory($data);
-
-        if(!$newPasswordCategory){
-            return redirect(route('newpasswordcat'))->with('error',"New Password Category record failed, try again please");
+        if ($authManagerC->hasAUserLoggedIn() === false) {
+            return  redirect(route('home'));
         }
 
-        return  redirect(route('home'))->with('success',"New Password Category record");
+          return view('passwordCategories.newpasswordCategory');
     }
-    /**
-     * Summary of selectpasswordcat
-     * @param mixed $id
-     * @return void
-     */
-    public function selectpasswordcat($id){}
-    /**
-     * Summary of readPasswordcat
-     * @param mixed $id
-     * @return \Illuminate\Contracts\View\View
-     */
-    public function readPasswordcat($id){
-          return view('home');
-    }
-    /**
-     * Summary of editpasswordcat
-     * @param mixed $id
-     * @return \Illuminate\Contracts\View\View
-     */
-    public function editpasswordcat($id){
-          return view('home');
-    }
-        /**
-         * Summary of updatepasswordcat
-         * @param mixed $id
-         * @return void
-         */
-        public function updatepasswordcat($id){}
-    /**
-     * Summary of deletepasswordcat
-     * @param mixed $id
-     * @return void
-     */
-    public function deletepasswordcat($id){}
 }
