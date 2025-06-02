@@ -11,14 +11,16 @@
         <div class="col-xs-12
                 col-md-12
                 ">
-                <label for="exampleInputEmail1" class="form-label">Email Add</label>
-                <input type="email" class="border-1 border-black border-solid"  id="email"  name="email" >
+                <x-form-label for="email" class="block text-sm font-medium text-gray-700">Email</x-form-label>
+                {{-- <input type="email" class="border-1 border-black border-solid"  id="email"  name="email" > --}}
+                <x-form-field class="border-1 border-black border-solid"  type="text" id="email" name="email"></x-form-field>
         </div>
         <div class="col-xs-12
                 col-md-12
                 ">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="border-1 border-black border-solid"  id="password" name="password" >
+                <x-form-label for="password" class="block text-sm font-medium text-gray-700">Password</x-form-label>
+                {{-- <input type="password" class="border-1 border-black border-solid"  id="password" name="password" > --}}
+                <x-form-field class="border-1 border-black border-solid"  type="password" id="password" name="password" ></x-form-field>
         </div>
 
         <div class="col-xs-12 col-md-12">
