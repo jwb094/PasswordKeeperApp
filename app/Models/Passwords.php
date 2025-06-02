@@ -16,6 +16,7 @@ class Passwords extends Model
      * @var list<string>
      */
     protected $fillable = [
+        'website',
         'username',
         'password',
         'notes',

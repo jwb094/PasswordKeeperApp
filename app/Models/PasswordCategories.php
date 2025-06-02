@@ -9,7 +9,7 @@ class PasswordCategories extends Model
     //
 
 
-    protected $table ="password_categories";
+    protected $table ="passwords_categories";
    // public $timestamps = false;
     /**
      * The attributes that are mass assignable.
@@ -24,16 +24,16 @@ class PasswordCategories extends Model
     ];
 
 
-     function create($data){
-        //dd($data);
+    //  public function create($data){
+    //     //dd($data);
 
-        //$setting = PasswordCategories::firstOrNew($data);
-        //return $setting;
-       // dd($setting);
-      // PasswordCategories::create($data);
-      return self::create($data);
-         //return PasswordCategories::firstOrNew($data);
-    }
+    //     //$setting = PasswordCategories::firstOrNew($data);
+    //     //return $setting;
+    //    // dd($setting);
+    //   // PasswordCategories::create($data);
+    //   return self::create($data);
+
+    // }
 
 
     //

@@ -1,0 +1,1 @@
+<label for="{{$slot}}" class="form-label">{{$slot}}</label> 
