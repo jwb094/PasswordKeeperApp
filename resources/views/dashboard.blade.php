@@ -27,7 +27,7 @@ show all passwords and categories
     @foreach($categories as $category)
 
     <li><a href="">{{  $category->title  }}</a>
-        <a href="/category/edit/{{$item->id}}">Edit</a>
+        <a href="/category/edit/{{$category->id}}">Edit</a>
 
         <form action="{{ route('categories.destroy', $category->id) }}" method="POST" style="display:inline;">
                             @csrf
