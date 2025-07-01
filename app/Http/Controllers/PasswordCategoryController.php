@@ -68,7 +68,7 @@ class PasswordCategoryController extends Controller
         $updatedPassword =   $PasswordsM->updatePwdRecord($id,$data);
 
         if(!$updatedPassword){
-            return redirect(route('editpassword'))->with('error',"Update Password failed, try again please");
+            return redirect(route('editpassword'))->with('error',"Update Password failed, try again please")->with($updatedPassword);;
         }
 
         return  redirect(route('dashboard'))->with('success',"");
@@ -100,7 +100,7 @@ class PasswordCategoryController extends Controller
         ]);
 
         if(!$newPasswordCategory){
-            return redirect('category')->with('failure', 'New Password Category record failed, try again please"');
+            return redirect('category')->with('failure', 'New Password Category record failed, try again please"')->with($newPasswordCategory);;
           //return redirect('/category');
         }
 
