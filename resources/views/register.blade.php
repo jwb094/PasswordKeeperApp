@@ -24,7 +24,7 @@
         </div>
 
         <div class="col-xs-12 col-md-12">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <x-form-button class="btn btn-primary"  type="submit">Submit</x-form-field>
         </div>
         </form>
     </div>
