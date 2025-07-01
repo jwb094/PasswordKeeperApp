@@ -1,4 +1,5 @@
 {
+    "/resources/dist/js/accordion.js": "/resources/dist/js/accordion.js",
     "/resources/dist/js/test.js": "/resources/dist/js/test.js",
-    "/resources/css/main.css": "/resources/css/main.css"
+    "/resources/dist/css/main.css": "/resources/dist/css/main.css"
 }

@@ -1,16 +1,25 @@
 @use "../../node_modules/flexboxgrid/css/flexboxgrid.min.css";
 
-//@use "../../node_modules/uniformcss/dist/uniform.min.css";
+@use "../../node_modules/uniformcss/dist/uniform.min.css";
 
-@use "uniform" as * with (
-  $config: (
-    important: true,
-    colors: (
-      custom-color-1: red,
-      custom-color-2: blue
-    )
-  )
-);
+@use "accordion";
+
+.c-form-block{
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// @use "uniform" as * with (
+//   $config: (
+//     important: true,
+//     colors: (
+//       custom-color-1: red,
+//       custom-color-2: blue
+//     )
+//   )
+// );
 
   .l-container{
     max-width:1200px;
@@ -20,7 +29,8 @@
   }
 
   footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+ position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
 }

@@ -1,5 +1,6 @@
 const mix = require('laravel-mix');
-require('laravel-mix-postcss-config');
+//require('laravel-mix-postcss-config');
+
 // mix.sass('resources/css/main.scss', 'resources/dist/css/main.css', {
 //   sassOptions: {
 //     includePaths: [
@@ -8,13 +9,21 @@ require('laravel-mix-postcss-config');
 //     ]
 //   }})
 
-mix.sass('resources/css/main.scss', 'resources/css/', {
+// mix.sass('resources/css/main.scss', 'resources/css/', {
+//     sassOptions: {
+//       includePaths: [
+//         './node_modules/uniformcss',
+//         './node_modules/flexboxgrid'
+//       ]
+//     }})
+mix.sass('resources/css/main.scss', 'resources/dist/css/main.css', {
     sassOptions: {
       includePaths: [
         './node_modules/uniformcss',
         './node_modules/flexboxgrid'
       ]
     }})
+.js('resources/js/accordion.js', 'resources/dist/js')
 .js('resources/js/test.js', 'resources/dist/js')
 .copyDirectory('resources/imgs', 'resources/dist/imgs')
 .copyDirectory('resources/assets', 'resources/dist/assets');
