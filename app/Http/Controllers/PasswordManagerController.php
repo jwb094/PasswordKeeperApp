@@ -67,7 +67,7 @@ class PasswordManagerController extends Controller
         $newPassword =   $PasswordsM->newPwdRecord($data);
 
         if(!$newPassword){
-            return redirect(route('newpassword'))->with('error',"Registration failed, try again please")->with($data);
+            return redirect(route('newpassword'))->with('error',"Registration failed, try again please")->with(compact($data));
         }
 
         return  redirect(route('dashboard'))->with('success',", Login to access the application");
@@ -128,7 +128,7 @@ class PasswordManagerController extends Controller
         $updatedPassword =   $PasswordsM->updatePwdRecord($id,$data);
 
         if(!$updatedPassword){
-            return redirect(route('editpassword'))->with('error',"Update Password failed, try again please")->with($data);
+            return redirect(route('editpassword'))->with('error',"Update Password failed, try again please")->with('data',$data);
         }
 
         return  redirect(route('dashboard'))->with('success',"");
