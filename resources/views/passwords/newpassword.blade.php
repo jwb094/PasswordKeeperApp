@@ -11,7 +11,6 @@
     <div class="row center-md">
     <form action="{{route('savepassword')}}" method="POST" class=" mx-auto " style="width:500px;">
     @csrf
-    {{$data['website'] ?? ''}}
         <div class="col-xs-12 col-md-12">
                 <x-form-label for="website" class="block text-sm font-medium text-gray-700">Website</x-form-label>
                 <x-form-field type="text" class="border-1 border-black border-solid"  id="website" name="website"  value="{{ old('website') }}"></x-form-field>     
