@@ -11,21 +11,20 @@
         <div class="col-xs-12
                 col-md-12
                 ">
-                <label for="exampleInputEmail1" class="form-label">Ttitle</label>
-                <input type="text" class="border-1 border-black border-solid"  id="title"  name="title"  value="{{$data->title}}">
-                
+
+                <x-form-label for="notes" class="block text-sm font-medium text-gray-700">Additional Notes</x-form-label>
+                <x-form-field type="text" class="border-1 border-black border-solid"  id="title" name="title"  value="{{ old('title') }}"></x-form-field>  
         </div>
         <div class="col-xs-12
                 col-md-12
                 ">
-                <label for="password" class="form-label">Additional Notes</label>
-                <textarea class="border-1 border-black border-solid"   id="notes" name="notes" cols="10">{{$data->notes}}</textarea>
-            
+                <x-form-label for="notes" class="block text-sm font-medium text-gray-700">Additional Notes</x-form-label>
+                <x-form-textarea  class="border-1 border-black border-solid"   id="notes" name="notes" cols="10">{{$data['notes']}}</x-form-textarea>
         </div> 
 
         <div class="col-xs-12 col-md-12">
                 <a href="/dashboard">Cancel</a>
-        <button type="submit" class="btn btn-primary">Submit</button>
+                 <x-form-button class="btn btn-primary"  type="submit">Submit</x-form-field>
         </div>
         </form>
     </div>
