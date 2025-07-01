@@ -7,7 +7,9 @@
     <!-- <link href="https://cdn.jsdelivr.net/npm/uniformcss@1.0.0/dist/uniform.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
     <script src="https://cdn.jsdelivr.net/npm/tailwind-ui-components@1.0.0/dist/index.min.js"></script> -->
-    <link rel="stylesheet" href="{{ URL::asset('resources/css/main.css') }}">
+    {{-- <link rel="stylesheet" href="{{ URL::asset('resources/css/main.css') }}"> --}}
+    <link rel="stylesheet" href="{{URL::asset('/resources/dist/css/main.css')}}">
+    <script src="/resources/dist/js/accordion.js"></script> 
     <!-- Styles / Scripts -->
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
