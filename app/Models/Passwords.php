@@ -20,6 +20,7 @@ class Passwords extends Model
         'username',
         'password',
         'notes',
+        'password_hash',
     ];
 
 

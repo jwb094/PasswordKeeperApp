@@ -61,9 +61,10 @@ class PasswordManagerController extends Controller
 
         $data['website'] = $validated['website'];
         $data['username'] = $validated['username'];
-        $data['password'] = Hash::make($validated['password']);
+        $data['password'] = $validated['password'];
         $data['notes'] = $validated['notes'];
-
+        $data['password_hash'] = Hash::make($validated['password']);
+        //dd($data);
         $newPassword =   $PasswordsM->newPwdRecord($data);
 
         if(!$newPassword){
@@ -121,14 +122,15 @@ class PasswordManagerController extends Controller
         ]);
         $data['website'] = $request->website;
         $data['username'] = $request->username;
-        $data['password'] = Hash::make($request->password);
+        $data['password'] = $request->password;
         $data['notes'] = $request->notes;
+        $data['password_hash'] = Hash::make($request->password);
 
         //dd($data);
         $updatedPassword =   $PasswordsM->updatePwdRecord($id,$data);
 
         if(!$updatedPassword){
-            return redirect(route('editpassword'))->with('error',"Update Password failed, try again please")->with('data',$data);
+            return redirect(route('editpassword'))->with('error',"Update Password failed, try again please")->with(compact($data));
         }
 
         return  redirect(route('dashboard'))->with('success',"");
