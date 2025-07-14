@@ -6,7 +6,7 @@
 
 <div class="l-container">
     <div class="row center-md">
-        <div class="c-form-block">
+        <div class="c-form-block | radius-lg border-black border-1">
             <form action="{{route('login.post')}}" method="POST" class=" mx-auto " style="width:500px;">
             @csrf
                 <div class="col-xs-12
@@ -22,7 +22,7 @@
                         <input type="password" class="border-1 border-black border-solid"  id="password" name="password" >
                 </div>
         
-                <div class="col-xs-12 col-md-12">
+                <div class="col-xs-12 col-md-12 |  my-12">
                 <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
                 </form>
