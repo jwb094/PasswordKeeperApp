@@ -4,11 +4,22 @@
 
 @use "accordion";
 
+@use "buttons";
+
 .c-form-block{
-  height:100vh;
+  //height:100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  width:100%;
+
+  margin: 75% auto;
+
+ @media (min-width: 768px) {
+    margin: 25% auto;
+    height: auto;
+    width:auto;
+  }
 }
 
 // @use "uniform" as * with (
