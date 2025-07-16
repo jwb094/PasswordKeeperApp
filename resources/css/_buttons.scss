@@ -10,5 +10,12 @@
             background-color: #157b15b5;
         }
     }
+
+      &.btn-secondary {
+        background: #808180b5;
+        &:hover{
+            background-color: #444444b5;
+        }
+    }
 }
 
