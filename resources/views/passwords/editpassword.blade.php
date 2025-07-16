@@ -7,31 +7,31 @@
             <form
                 action="/updatepassword/{{$data->id}}" method="POST" class=" w-full mx-auto my-56" style="">
                 @csrf
-                <div class="col-xs-12 col-md-12 ">
+                <div class="col-xs-12 col-md-12 | my-48">
                     <div class="entryarea">
                         <input type="text" class="form-field border-1 border-black border-solid" id="website" name="website" value="{{$data->website}}" required>
                         <label for="website" class="form-label">Website</label>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-12 ">
+                <div class="col-xs-12 col-md-12 | my-48">
                     <div class="entryarea">
                         <input type="email" class="form-field border-1 border-black border-solid" id="username" name="username" value="{{$data->username}}" required>
                         <label for="username" class="form-label">username</label>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-12 ">
+                <div class="col-xs-12 col-md-12 | my-48">
                     <div class="entryarea">
                         <input type="password" class="form-field border-1 border-black border-solid" id="password" name="password" value="{{$data->password}}" required>
                         <label for="password" class="form-label">Password</label>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-12 ">
+                <div class="col-xs-12 col-md-12 | my-48">
                     <div class="entryarea">
                         <textarea class="form-field border-1 border-black border-solid" id="notes" name="notes"rows="1"> {{$data->notes}}</textarea>
                         <label for="password" class="form-label">Additional Notes</label>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-12 | my-24">
+                <div class="col-xs-12 col-md-12 | my-48">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </form>

@@ -4,7 +4,7 @@
     
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
-                Header
+                Password Keeper
             </div>
             <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
                 <ul>
