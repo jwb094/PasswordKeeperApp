@@ -34,7 +34,7 @@
                     <div class="entryarea">
                         <textarea class="form-field border-1 border-black border-solid" id="notes" name="notes" rows="2" placeholder=" " required
                         ></textarea>
-                        <label for="password" class="form-label">Additional Notes</label>
+                        <label for="notes" class="form-label">Additional Notes</label>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-12">
