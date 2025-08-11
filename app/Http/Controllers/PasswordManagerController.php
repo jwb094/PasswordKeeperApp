@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 use App\Models\Passwords;
 use App\Models\PasswordCategories;
 Use App\Http\Controllers\AuthManager;
@@ -54,21 +55,20 @@ class PasswordManagerController extends Controller
         $validated =  $request->validate([
             'website'=>'required',
             'username'=>'required',
-            'password'=>'required',
+            'password'=>'required|min:12',
             'notes'=>'max:255',
-         
         ]);
 
         $data['website'] = $validated['website'];
         $data['username'] = $validated['username'];
-        $data['password'] = Hash::make($validated['password']);
+        $data['password'] = $validated['password'];
         $data['notes'] = $validated['notes'];
-
-       // dd($data);  
+        $data['password_hash'] = Hash::make($validated['password']);
+        //dd($data);
         $newPassword =   $PasswordsM->newPwdRecord($data);
 
         if(!$newPassword){
-            return redirect(route('newpassword'))->with('error',"Registration failed, try again please");
+            return redirect(route('newpassword'))->with('error',"Registration failed, try again please")->with(compact($data));
         }
 
         return  redirect(route('dashboard'))->with('success',", Login to access the application");
@@ -85,7 +85,7 @@ class PasswordManagerController extends Controller
     }
 
     /**
-     * Display Edit Password PAge with Selected Password
+     * Display Edit Password Page with Selected Password
      * @param mixed $id
      * @return \Illuminate\Contracts\View\View
      */
@@ -116,20 +116,21 @@ class PasswordManagerController extends Controller
         $request->validate([
             'website'=>'required',
             'username'=>'required',
-            'password'=>'required',
+            'password'=>'required|min:12',
             'notes'=>'max:255',
          
         ]);
         $data['website'] = $request->website;
         $data['username'] = $request->username;
-        $data['password'] = Hash::make($request->password);
+        $data['password'] = $request->password;
         $data['notes'] = $request->notes;
+        $data['password_hash'] = Hash::make($request->password);
 
         //dd($data);
         $updatedPassword =   $PasswordsM->updatePwdRecord($id,$data);
 
         if(!$updatedPassword){
-            return redirect(route('editpassword'))->with('error',"Update Password failed, try again please");
+            return redirect(route('editpassword'))->with('error',"Update Password failed, try again please")->with(compact($data));
         }
 
         return  redirect(route('dashboard'))->with('success',"");
