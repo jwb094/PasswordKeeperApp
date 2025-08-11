@@ -47926,3 +47926,12 @@ select {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+<<<<<<< HEAD
+=======
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+>>>>>>> feature/component_DRY
