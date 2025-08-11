@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-xs-12 col-md-12 | my-48">
                     <div class="entryarea">
-                        <input type="password" class="form-field border-1 border-black border-solid" id="password" name="password" value="{{$data->password}}" required>
+                        <input type="text" class="form-field border-1 border-black border-solid" id="password" name="password" value="{{$data->password}}" required>
                         <label for="password" class="form-label">Password</label>
                     </div>
                 </div>
