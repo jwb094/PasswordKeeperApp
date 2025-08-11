@@ -12,8 +12,8 @@
                 col-md-12
                 ">
 
-                <x-form-label for="notes" class="block text-sm font-medium text-gray-700">Additional Notes</x-form-label>
-                <x-form-field type="text" class="border-1 border-black border-solid"  id="title" name="title"  value="{{ old('title') }}"></x-form-field>  
+                <x-form-label for="notes" class="block text-sm font-medium text-gray-700">Title</x-form-label>
+                <x-form-field type="text" class="border-1 border-black border-solid"  id="title" name="title"  value="{{$data['title']}}"></x-form-field>  
         </div>
         <div class="col-xs-12
                 col-md-12
