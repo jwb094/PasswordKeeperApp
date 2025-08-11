@@ -10,26 +10,34 @@
                         <div class="col-xs-12
                                 col-md-12
                                 ">
-                                <label for="firstname" class="">First Name</label>
-                                <input type="text" class="border-1 border-black border-solid" id="firstname" name="firstname">
+                                <div class="entryarea">
+                                                <input type="text" class="form-field border-1 border-black border-solid" id="firstname" name="firstname" required>
+                                                <label for="firstname" class="form-label">First Name</label>
+                                        </div>
                         </div>
                         <div class="col-xs-12
                                 col-md-12
                                 ">
-                                <label for="Lastname" class="form-label">Last Name</label>
-                                <input type="text" class="border-1 border-black border-solid"  id="lastname" name="lastname">
+                                      <div class="entryarea">
+                                                <input type="text" class="form-field border-1 border-black border-solid" id="lastname" name="lastname" required>
+                                                <label for="lastname" class="form-label">Last Name</label>
+                                        </div>
                         </div>
                         <div class="col-xs-12
                                 col-md-12
                                 ">
-                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="border-1 border-black border-solid"  id="email"  name="email" >
+                                  <div class="entryarea">
+                                                <input type="text" class="form-field border-1 border-black border-solid" id="email" name="email" required>
+                                                <label for="email" class="form-label">Email</label>
+                                        </div>
                         </div>
                         <div class="col-xs-12
                                 col-md-12
                                 ">
-                                <label for="password" class="form-label">Password</label>
-                                <input type="password" class="border-1 border-black border-solid"  id="password" name="password" >
+                                   <div class="entryarea">
+                                                <input type="text" class="form-field border-1 border-black border-solid" id="password" name="password" required>
+                                                <label for="password" class="form-label">Password</label>
+                                        </div>
                         </div>
 
                         <div class="col-xs-12 col-md-12">
