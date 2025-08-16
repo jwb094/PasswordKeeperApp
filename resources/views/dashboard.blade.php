@@ -4,6 +4,7 @@
 <div class="l-container">
     <div class="row center-md flex h-100vh">
         <div class="c-form-block">
+
             <div class="c-tabs">
                 <div class="tabs">
                     <div class="tabs__head">
