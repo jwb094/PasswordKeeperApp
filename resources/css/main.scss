@@ -41,18 +41,25 @@
 }
 
 .c-form-block--login{
-  width: 500px;
+ 
+    width: 80%;
+    border: 5px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    padding: 10px;
+   @media (min-width: 768px){
+      width: 50%;
+      border: 5px solid;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      padding: 10px; 
+  }
 }
 
-// @use "uniform" as * with (
-//   $config: (
-//     important: true,
-//     colors: (
-//       custom-color-1: red,
-//       custom-color-2: blue
-//     )
-//   )
-// );
 
   .l-container{
     max-width:1200px;
@@ -62,8 +69,7 @@
   }
 
   footer {
- position: absolute;
-  // bottom: 0;
-  // width: 100%;
-  // height: 2.5rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
