@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-xs-12 col-md-12 | my-48">
                     <div class="entryarea">
-                        <input type="email" class="form-field border-1 border-black border-solid" id="username" name="username" value="{{$data->username}}" required>
+                        <input type="text" class="form-field border-1 border-black border-solid" id="username" name="username" value="{{$data->username}}" required>
                         <label for="username" class="form-label">username</label>
                     </div>
                 </div>
@@ -32,7 +32,8 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-12 | my-48">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a class="btn btn-grey" href="/dashboard">Cancel</a>
+                    <button type="submit" class="btn btn-green">Submit</button>
                 </div>
             </form>
         </div>

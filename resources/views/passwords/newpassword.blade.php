@@ -9,15 +9,13 @@
                 <div class="col-xs-12 col-md-12 | my-12">
                     <div class="entryarea">
                         <input type="text" class="form-field  border-1 border-black border-solid" id="website" name="website" required>
-                        <x-form-label class="form-label" for="title"> Website</x-form-label>
+                        <x-form-label class="form-label" for="website"> Website</x-form-label>
                     </div>
                 </div>
-                <div class="col-xs-12
-                            col-md-12
-                            | my-12">
+                <div class="col-xs-12 col-md-12 | my-12">
                     <div class="entryarea">
-                        <input type="email" class="form-field border-1 border-black border-solid" id="username" name="username" required>
-                        <x-form-label class="form-label" for="title"> Username</x-form-label>
+                        <input type="text" class="form-field border-1 border-black border-solid" id="username" name="username" required>
+                        <x-form-label class="form-label" for="username"> Username</x-form-label>
                     </div>
                 </div>
                 <div class="col-xs-12
@@ -25,7 +23,7 @@
                             | my-12">
                     <div class="entryarea">
                         <input type="password" class="form-field border-1 border-black border-solid" id="password" name="password" required>
-                        <label for="password" class="form-label">Password</label>
+                        <x-form-label for="password" class="form-label">Password</x-form-label>
                     </div>
                 </div>
                 <div class="col-xs-12
@@ -34,11 +32,11 @@
                     <div class="entryarea">
                         <textarea class="form-field border-1 border-black border-solid" id="notes" name="notes" rows="2" placeholder=" " required
                         ></textarea>
-                        <label for="notes" class="form-label">Additional Notes</label>
+                        <x-form-label for="notes" class="form-label">Additional Notes</x-form-label>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-12">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-green">Submit</button>
                 </div>
             </form>
         </div>

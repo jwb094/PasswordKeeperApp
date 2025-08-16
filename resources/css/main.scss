@@ -21,8 +21,9 @@
     height: auto;
     width:auto;
   }
-  &--edit-pwd{
+  &--edit-pwd,&--edit-pwdcat{
       margin: 25% auto;
+      align-items: unset;
       @media (min-width: 768px) {
         height: 75%;
         width: 500px;

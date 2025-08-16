@@ -24,8 +24,8 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-12 | my-48 mx-auto flex justify-content-center flex-row  align-items-center gap-12">
-                    <a class="btn btn-secondary" href="/dashboard">Cancel</a>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a class="btn btn-grey" href="/dashboard">Cancel</a>
+                    <button type="submit" class="btn btn-green">Submit</button>
                 </div>
             </form>
         </div>

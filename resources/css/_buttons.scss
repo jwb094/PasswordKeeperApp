@@ -4,15 +4,33 @@
     border: 1px solid black;
     border-radius: 0.25rem;
     
-    &.btn-primary {
-        background: #0bce0bb5;
+    &.btn-blue {
+        background: #00027eb5;
+         color:#fff;
         &:hover{
             background-color: #157b15b5;
         }
     }
 
-      &.btn-secondary {
+    &.btn-green {
+        background: #0bce0bb5;
+         color:#fff;
+        &:hover{
+            background-color: #157b15b5;
+        }
+    }
+
+      &.btn-grey {
         background: #808180b5;
+        color:#fff;
+        &:hover{
+            background-color: #444444b5;
+        }
+    }
+
+    &.btn-red {
+        background: #dc3545;
+         color:#fff;
         &:hover{
             background-color: #444444b5;
         }

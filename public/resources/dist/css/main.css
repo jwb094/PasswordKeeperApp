@@ -34174,6 +34174,8 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 400px;
+  width: 100%;
 }
 
 .tabs {
@@ -34208,6 +34210,9 @@ select {
   padding: 30px;
   display: none;
 }
+.tabs__content li {
+  list-style-type: none;
+}
 
 .tabs__content.is_active {
   display: block;
@@ -34227,16 +34232,32 @@ select {
   border: 1px solid black;
   border-radius: 0.25rem;
 }
-.btn.btn-primary {
-  background: rgba(11, 206, 11, 0.7098039216);
+.btn.btn-blue {
+  background: rgba(0, 2, 126, 0.7098039216);
+  color: #fff;
 }
-.btn.btn-primary:hover {
+.btn.btn-blue:hover {
   background-color: rgba(21, 123, 21, 0.7098039216);
 }
-.btn.btn-secondary {
-  background: rgba(128, 129, 128, 0.7098039216);
+.btn.btn-green {
+  background: rgba(11, 206, 11, 0.7098039216);
+  color: #fff;
 }
-.btn.btn-secondary:hover {
+.btn.btn-green:hover {
+  background-color: rgba(21, 123, 21, 0.7098039216);
+}
+.btn.btn-grey {
+  background: rgba(128, 129, 128, 0.7098039216);
+  color: #fff;
+}
+.btn.btn-grey:hover {
+  background-color: rgba(68, 68, 68, 0.7098039216);
+}
+.btn.btn-red {
+  background: #dc3545;
+  color: #fff;
+}
+.btn.btn-red:hover {
   background-color: rgba(68, 68, 68, 0.7098039216);
 }
 
@@ -34327,11 +34348,12 @@ textarea.form-field:valid + .form-label {
     width: auto;
   }
 }
-.c-form-block--edit-pwd {
+.c-form-block--edit-pwd, .c-form-block--edit-pwdcat {
   margin: 25% auto;
+  align-items: unset;
 }
 @media (min-width: 768px) {
-  .c-form-block--edit-pwd {
+  .c-form-block--edit-pwd, .c-form-block--edit-pwdcat {
     height: 75%;
     width: 500px;
   }

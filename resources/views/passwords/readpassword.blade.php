@@ -31,7 +31,7 @@
                 </div>
                 <div class="col-xs-12 col-md-12 | my-24">
 
-                <a href="/dashboard" class="btn btn-secondary text-sm/6 font-semibold text-gray-900">Back</a>
+                <a href="/dashboard" class="btn btn-grey text-sm/6 font-semibold text-white-900">Back</a>
                 </div>
             </form>
         </div>
