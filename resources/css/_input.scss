@@ -1,0 +1,60 @@
+.entryarea{
+    position: relative;
+    height:80px;
+    line-height:80px;
+}
+
+input.form-field,textarea.form-field{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 30px;
+    line-height: 40px;
+    border-radius: 10px;
+    // border: 2px solid #f0ffff;
+    background:transparent;
+    transition: 0.2s ease;
+    z-index: 1111;
+}
+
+.form-label{
+     position: absolute;
+    font-size: 1.6em;
+    padding: 0 25px;
+    left: 0;
+    top: -25%;
+
+    &--above{
+        line-height: 30px;
+        padding: 0 8px;
+        transform: translate(-10px, 10px) scale(0.88);
+    }
+      &--textarea-above{
+        line-height: 30px;
+        padding: 0 8px;
+        transform: translate(-10px, -8px) scale(0.88);
+    }
+}
+
+input.form-field:focus,
+input.form-field:valid,
+textarea.form-field:focus:not(:placeholder-shown),
+textarea.form-field:valid {
+        color:#66ff00;
+        border:4px solid #66ff00;
+}
+
+input.form-field:focus + .form-label,
+input.form-field:valid + .form-label,
+textarea.form-field:focus:not(:placeholder-shown) + .form-label,
+textarea.form-field:valid + .form-label{
+        color:#66ff00;
+        height:30px;
+        line-height:30px;
+        padding:0 12px;
+        transform:translate(-10px,-10px) scale(0.88);
+        z-index: 1111;
+      
+    }

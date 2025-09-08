@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./resources/css/main.scss":
@@ -8,9 +7,37 @@
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
+
+/***/ }),
+
+/***/ "./resources/js/accordion.js":
+/*!***********************************!*\
+  !*** ./resources/js/accordion.js ***!
+  \***********************************/
+/***/ (() => {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var tabs = document.querySelectorAll('.tabs__toggle'),
+    contents = document.querySelectorAll('.tabs__content');
+  console.log(tabs);
+  console.log(contents);
+  tabs.forEach(function (tab, index) {
+    tab.addEventListener('click', function () {
+      contents.forEach(function (content) {
+        return content.classList.remove('is_active');
+      });
+      tabs.forEach(function (tab) {
+        return tab.classList.remove('is_active');
+      });
+      contents[index].classList.add('is_active');
+      tabs[index].classList.add('is_active');
+    });
+  });
+});
 
 /***/ })
 
@@ -151,6 +178,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	__webpack_require__.O(undefined, ["resources/dist/css/main"], () => (__webpack_require__("./resources/js/accordion.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["resources/dist/css/main"], () => (__webpack_require__("./resources/css/main.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	

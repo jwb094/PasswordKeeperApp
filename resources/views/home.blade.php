@@ -4,27 +4,30 @@
 
 
 
-<div class="l-container">
+<div class="l-container relative">
     <div class="row center-md">
-        <div class="c-login-form">
-            <form action="{{route('login.post')}}" method="POST" class=" mx-auto " style="width:500px;">
-            @csrf
-                <div class="col-xs-12 col-md-12">
-                        <x-form-label for="email" class="block text-sm font-medium text-gray-700">Email</x-form-label>
-                        <x-form-field class="border-1 border-black border-solid"  type="text" id="email" name="email"></x-form-field>
-                </div>
-                <div class="col-xs-12
-                        col-md-12
-                        ">
-                        <x-form-label for="password" class="block text-sm font-medium text-gray-700">Password</x-form-label>
-                        <x-form-field class="border-1 border-black border-solid"  type="password" id="password" name="password" ></x-form-field>
-                </div>
-        
-                <div class="col-xs-12 col-md-12">
-                <x-form-button class="btn btn-primary"  type="submit">Submit</x-form-field>
-                </div>
-            </form>
+        <div class="col-md-6">
+            <div class="c-form-block ">
+                <form action="{{route('login.post')}}" method="POST" class=" c-form-block--login mx-auto my-48 ">
+                    @csrf
+                    <div class="col-xs-12 col-md-12 | mt-12 md.mt-48">
+                        <div class="entryarea">
+                            <x-form-field type="text" class="form-field border-1 border-black border-solid" id="email" name="email" required></x-form-field>
+                            <x-form-label for="email" class="form-label">Email</x-form-label>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12 ">
+                        <div class="entryarea">
+                            <x-form-field type="password" class="form-field border-1 border-black border-solid" id="password" name="password" required></x-form-field>
+                            <x-form-label for="password" class="form-label">Password</x-form-label>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-12 |  my-12 flex flex-row justify-center">
+                        <x-form-button class="btn btn-primary" type="submit">Submit</x-form-field>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-@endsection
+    @endsection

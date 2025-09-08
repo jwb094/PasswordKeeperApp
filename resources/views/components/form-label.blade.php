@@ -1,1 +1,1 @@
-<label for="{{$slot}}" {{ $attributes->merge(['class' => '']) }}>{{$slot}}</label> 
+<label for="{{$slot}}" {{ $attributes->merge(['class' => '','id'=> '']) }}>{{$slot}}</label> 

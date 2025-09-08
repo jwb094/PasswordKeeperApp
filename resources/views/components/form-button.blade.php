@@ -1,1 +1,1 @@
-<button type="{{$slot}}" class="form-label">{{$slot}}</button> 
+<button type="{{$slot}}"  {{ $attributes->merge(['class' => '','id'=> '']) }}>{{$slot}}</button> 

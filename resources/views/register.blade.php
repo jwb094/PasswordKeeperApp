@@ -4,29 +4,47 @@
 
 <div class="l-container">
     <div class="row center-md">
-    <form action="{{route('registeration.post')}}" method="POST" class=" mx-auto " style="width:500px;">
-    @csrf
-        <div class="col-xs-12 col-md-12">
-                <x-form-label for="firstname" class="block text-sm font-medium text-gray-700"> First Name </x-form-label>
-                <x-form-field class="border-1 border-black border-solid"  type="text" id="first_name" name="firstname" id="firstname"></x-form-field>
-        </div>
-        <div class="col-xs-12 col-md-12">
-                 <x-form-label for="lastname" class="block text-sm font-medium text-gray-700"> Last Name </x-form-label>
-                <x-form-field type="text" id="lastname" name="lastname" class="border-1 border-black border-solid" id="lastname"></x-form-field>
-        </div>
-        <div class="col-xs-12 col-md-12">
-                <x-form-label for="email" class="block text-sm font-medium text-gray-700"> Email address </x-form-label>
-                <x-form-field type="text" id="email" name="email" class="border-1 border-black border-solid"></x-form-field>
-        </div>
-        <div class="col-xs-12 col-md-12">
-                <x-form-label for="password" class="block text-sm font-medium text-gray-700"> Password </x-form-label>
-                <x-form-field type="password" id="password" name="password" class="border-1 border-black border-solid"></x-form-field>
-        </div>
+             <div class="c-form-block |  radius-lg border-black border-1">
+                <form action="{{route('registeration.post')}}" method="POST" class=" c-form-block--register mx-auto mx-auto my-48" >
+                @csrf
+                        <div class="col-xs-12
+                                col-md-12
+                                ">
+                                <div class="entryarea">
+                                                <x-form-field type="text" class="form-field border-1 border-black border-solid" id="firstname" name="firstname" required></x-form-field>
+                                                <x-form-label for="firstname" class="form-label">First Name</x-form-label>
+                                        </div>
+                        </div>
+                        <div class="col-xs-12
+                                col-md-12
+                                ">
+                                      <div class="entryarea">
+                                                <x-form-field type="text" class="form-field border-1 border-black border-solid" id="lastname" name="lastname" required></x-form-field>
+                                                <x-form-label for="lastname" class="form-label">Last Name</x-form-label>
+                                        </div>
+                        </div>
+                        <div class="col-xs-12
+                                col-md-12
+                                ">
+                                  <div class="entryarea">
+                                                <x-form-field type="text" class="form-field border-1 border-black border-solid" id="email" name="email" required></x-form-field>
+                                                <x-form-label for="email" class="form-label">Email</x-form-label>
+                                        </div>
+                        </div>
+                        <div class="col-xs-12
+                                col-md-12
+                                ">
+                                   <div class="entryarea">
+                                                <x-form-field type="text" class="form-field border-1 border-black border-solid" id="password" name="password" required></x-form-field>
+                                                <x-form-label for="password" class="form-label">Password</x-form-label>
+                                        </div>
+                        </div>
 
-        <div class="col-xs-12 col-md-12">
-        <x-form-button class="btn btn-primary"  type="submit">Submit</x-form-field>
-        </div>
-        </form>
+                        <div class="col-xs-12 col-md-12">
+                          <x-form-button class="btn btn-primary"  type="submit">Submit</x-form-field>
+                        </div>
+                </form>
+             </div>
     </div>
 </div>
 

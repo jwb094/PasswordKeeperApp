@@ -1,10 +1,6 @@
 {
-<<<<<<< HEAD
-    "/resources/dist/js/test.js": "/resources/dist/js/test.js",
-    "/resources/css/main.css": "/resources/css/main.css"
-=======
     "/resources/dist/js/accordion.js": "/resources/dist/js/accordion.js",
     "/resources/dist/js/test.js": "/resources/dist/js/test.js",
     "/resources/dist/css/main.css": "/resources/dist/css/main.css"
->>>>>>> feature/component_DRY
+
 }
