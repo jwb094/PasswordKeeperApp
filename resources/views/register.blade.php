@@ -5,7 +5,7 @@
 <div class="l-container">
     <div class="row center-md">
              <div class="c-form-block |  radius-lg border-black border-1">
-                <form action="{{route('registeration.post')}}" method="POST" class=" c-form-block--login mx-auto mx-auto my-48" >
+                <form action="{{route('registeration.post')}}" method="POST" class=" c-form-block--register mx-auto mx-auto my-48" >
                 @csrf
                         <div class="col-xs-12
                                 col-md-12
