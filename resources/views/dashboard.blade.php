@@ -2,7 +2,7 @@
 @section('title','dashboard')
 @section('content')
 <div class="l-container">
-    <div class="row center-md flex h-100vh">
+    <div class="row center-md [ flex justify-center ] |  h-100vh ">
         <div class="c-form-block">
 
             <div class="c-tabs">
