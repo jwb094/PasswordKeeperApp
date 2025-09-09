@@ -15,7 +15,7 @@
                         <div class="tabs__content is_active">
                             <nav class="flex | mb-12">
                                 <ul>
-                                    <li> <a href="/newpassword"> New Password</a></li>
+                                    <li> <a class="btn btn-white" href="/newpassword"> New Password</a></li>
                                 </ul>
                             </nav>
                             <ul class="flex flex-col">
@@ -37,7 +37,7 @@
                         <div class="tabs__content">
                             <nav>
                                 <ul class="flex | mb-12">
-                                    <li> <a href="/category/create"> New Category</a></li>
+                                    <li> <a class="btn btn-white" href="/category/create"> New Category</a></li>
                                 </ul>
                             </nav>
                             <ul>

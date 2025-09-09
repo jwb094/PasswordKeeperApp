@@ -34260,6 +34260,13 @@ select {
 .btn.btn-red:hover {
   background-color: rgba(68, 68, 68, 0.7098039216);
 }
+.btn.btn-white {
+  background: white;
+  color: black;
+}
+.btn.btn-white:hover {
+  background-color: rgba(195, 195, 195, 0.7098039216);
+}
 
 .entryarea {
   position: relative;

@@ -35,5 +35,13 @@
             background-color: #444444b5;
         }
     }
+
+     &.btn-white {
+        background: white;
+         color:black;
+        &:hover{
+            background-color: #c3c3c3b5;
+        }
+    }
 }
 
