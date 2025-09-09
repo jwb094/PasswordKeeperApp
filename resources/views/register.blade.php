@@ -4,7 +4,7 @@
 
 <div class="l-container">
     <div class="row center-md">
-             <div class="c-form-block |  radius-lg border-black border-1">
+             <div class="c-form-block">
                 <form action="{{route('registeration.post')}}" method="POST" class=" c-form-block--register mx-auto mx-auto my-48" >
                 @csrf
                         <div class="col-xs-12
@@ -41,7 +41,7 @@
                         </div>
 
                         <div class="col-xs-12 col-md-12">
-                          <x-form-button class="btn btn-primary"  type="submit">Submit</x-form-field>
+                          <x-form-button class="btn btn-green"  type="submit">Submit</x-form-field>
                         </div>
                 </form>
              </div>
