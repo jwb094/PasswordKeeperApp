@@ -34237,7 +34237,7 @@ select {
   color: #fff;
 }
 .btn.btn-blue:hover {
-  background-color: rgba(21, 123, 21, 0.7098039216);
+  background-color: rgba(20, 23, 197, 0.7098039216);
 }
 .btn.btn-green {
   background: rgba(11, 206, 11, 0.7098039216);
@@ -34258,7 +34258,7 @@ select {
   color: #fff;
 }
 .btn.btn-red:hover {
-  background-color: rgba(68, 68, 68, 0.7098039216);
+  background-color: #961c28;
 }
 .btn.btn-white {
   background: white;
@@ -34274,7 +34274,9 @@ select {
   line-height: 80px;
 }
 
-input.form-field, textarea.form-field {
+input.form-field, textarea.form-field,
+textarea.form-field:invalid,
+textarea.form-field:invalid + .form-label textarea.form-field:empty {
   position: absolute;
   left: 0;
   width: 100%;
@@ -34347,9 +34349,15 @@ textarea.form-field:valid + .form-label {
   flex-direction: column;
   width: 100%;
   height: 100vh;
+  height: unset;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 @media (min-width: 768px) {
   .c-form-block {
+    height: initial;
+    margin-top: unset;
+    margin-bottom: unset;
     height: auto;
     width: auto;
   }
@@ -34408,6 +34416,95 @@ textarea.form-field:valid + .form-label {
     transform: translate(-50%, -50%);
     padding: 10px;
   }
+}
+
+.c-form-block--new-password {
+  width: 100%;
+  border: 5px solid;
+  border-radius: 5%;
+  /* position: absolute; */
+  /* top: 50%; */
+  left: 50%;
+  /* transform: translate(-50%, 50%); */
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  .c-form-block--new-password {
+    width: 50%;
+    border: 5px solid;
+    position: absolute;
+    top: -15%;
+    transform: translate(-50%, 50%);
+    padding: 10px;
+  }
+}
+
+.c-form-block--edit-password {
+  width: 100%;
+  border: 5px solid;
+  border-radius: 5%;
+  left: 50%;
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  .c-form-block--edit-password {
+    width: 50%;
+    border: 5px solid;
+    position: absolute;
+    top: -15%;
+    transform: translate(-50%, 50%);
+    padding: 10px;
+  }
+}
+
+.c-form-block--new-password-category {
+  width: 100%;
+  border: 5px solid;
+  border-radius: 5%;
+  /* position: absolute; */
+  /* top: 50%; */
+  left: 50%;
+  /* transform: translate(-50%, 50%); */
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  .c-form-block--new-password-category {
+    width: 50%;
+    border: 5px solid;
+    position: absolute;
+    top: -15%;
+    transform: translate(-50%, 50%);
+    padding: 10px;
+  }
+}
+
+.c-form-block--edit-password-category {
+  width: 100%;
+  border: 5px solid;
+  border-radius: 5%;
+  /* position: absolute; */
+  /* top: 50%; */
+  left: 50%;
+  /* transform: translate(-50%, 50%); */
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  .c-form-block--edit-password-category {
+    width: 50%;
+    border: 5px solid;
+    position: absolute;
+    top: -15%;
+    transform: translate(-50%, 50%);
+    padding: 10px;
+  }
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mL-auto {
+  margin-left: auto;
 }
 
 .l-container {

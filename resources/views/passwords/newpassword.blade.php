@@ -8,9 +8,14 @@
 @endif
 </div>
 <div class="l-container">
+    <div class="row center-md flex justify-content-center">
+        <h2>New Password</h2>
+    </div>
+</div>
+<div class="l-container">
     <div class="row center-md">
-        <div class="c-form-block c-form-block--edit-pwd | radius-lg border-black border-1">
-            <form action="{{route('savepassword')}}" method="POST" class=" w-full mx-auto my-56 ">
+        <div class="c-form-block c-form-block--newpassword-block  | radius-lg ">
+            <form action="{{route('savepassword')}}" method="POST" class="c-form-block--new-password mx-auto my-96 ">
                 @csrf
                 <div class="col-xs-12 col-md-12 | my-12">
                     <div class="entryarea">

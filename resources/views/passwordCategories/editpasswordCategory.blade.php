@@ -6,8 +6,8 @@
 
 <div class="l-container">
     <div class="row center-md">
-        <div class="c-form-block c-form-block--edit-pwdcat | radius-lg border-black border-1">
-            <form action="{{ route('store.update', $data->id) }}" method="POST">
+        <div class="c-form-block c-form-block--edit-password-category-block | radius-lg border-black border-1">
+            <form action="{{ route('store.update', $data->id) }}" method="POST" class="c-form-block--edit-password-category w-full mx-auto my-56 ">
                 @csrf
                 <div class="col-xs-12 col-md-12 | my-48">
                     <div class="entryarea">

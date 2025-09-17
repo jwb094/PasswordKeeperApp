@@ -1,1 +1,1 @@
-<textarea cols="10" for="{{$slot}}" {{ $attributes->merge(['class' => '','id' => '']) }}>{{$slot}}</textarea> 
+<textarea cols="10"  {{ $attributes->merge(['class' => '','id' => '']) }}>{{$slot}}</textarea> 

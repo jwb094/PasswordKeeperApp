@@ -4,7 +4,10 @@
     line-height:80px;
 }
 
-input.form-field,textarea.form-field{
+input.form-field,textarea.form-field,
+textarea.form-field:invalid,
+textarea.form-field:invalid + .form-label
+textarea.form-field:empty{
     position: absolute;
     left: 0;
     width: 100%;

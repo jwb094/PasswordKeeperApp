@@ -6,9 +6,9 @@
 
 <div class="l-container">
     <div class="row center-md">
-       <div class="c-form-block c-form-block--new-pwdcat | radius-lg border-black border-1">
+       <div class="c-form-block c-form-block--new-password-category-block ">
                 <h1>New Category</h1>
-            <form action="{{ route('store.data') }}" method="POST" class=" w-full mx-auto my-56 ">
+            <form action="{{ route('store.data') }}" method="POST" class="c-form-block--new-password-category w-full mx-auto my-56 ">
                 @csrf
                 <div class="col-xs-12 col-md-12 | my-24 ">
                     <div class="entryarea">

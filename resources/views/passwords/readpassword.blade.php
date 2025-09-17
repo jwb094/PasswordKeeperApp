@@ -2,9 +2,9 @@
 @section('title',' Read Password')
 @section('content')
 <div class="l-container">
-    <div class="row center-md">
-        <div class="c-form-block c-form-block--read-pwd | radius-lg border-black border-1">
-            <form action="" class=" w-full mx-auto my-56">
+    <div class="row center-md md.h-100vh md.align-items-center">
+        <div class="c-form-block  | radius-lg border-black border-1">
+            <form action="" class="c-form-block--read-pwd w-full mx-auto my-56">
                 <div class="col-xs-12 col-md-12 | my-12">
                     <div class="entryarea">
                         <x-form-label for="website" class="form-label form-label--above | ">Website</x-form-label>

@@ -8,15 +8,23 @@
 @use "input";
 
 .c-form-block{
-  //height:100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  // width:100%;
-  // margin: 75% auto;
+
+
+    height: unset;
+    margin-top: 0;
+    margin-bottom: 0;
+     @media (min-width: 768px) {
+      height: initial;
+      margin-top: unset;
+      margin-bottom: unset;
+     }
+  
 
  @media (min-width: 768px) {
     // margin: 25% auto;
@@ -39,8 +47,8 @@
      }
   }
 
-
 }
+
 
 .c-form-block--login{
  
@@ -98,6 +106,137 @@
   }
 }
 
+.c-form-block--new-password{
+   
+    // width: 80%;
+    // border: 5px solid;
+    // border-radius: 10%;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, 50%);
+    // padding: 10px;
+        width: 100%;
+    border: 5px solid;
+    border-radius: 5%;
+    /* position: absolute; */
+    /* top: 50%; */
+    left: 50%;
+    /* transform: translate(-50%, 50%); */
+    padding: 10px;
+   @media (min-width: 768px){
+        width: 50%;
+        border: 5px solid;
+        position: absolute;
+        top: -15%;
+        transform: translate(-50%, 50%);
+        padding: 10px;
+  }
+}
+.c-form-block--edit-password{
+  
+    width: 100%;
+    border: 5px solid;
+    border-radius: 5%;
+    left: 50%;
+    padding: 10px;
+   @media (min-width: 768px){
+        width: 50%;
+        border: 5px solid;
+        position: absolute;
+        top: -15%;
+        transform: translate(-50%, 50%);
+        padding: 10px;
+  }
+}
+
+.c-form-block--new-password-category{
+   
+
+        width: 100%;
+    border: 5px solid;
+    border-radius: 5%;
+    /* position: absolute; */
+    /* top: 50%; */
+    left: 50%;
+    /* transform: translate(-50%, 50%); */
+    padding: 10px;
+   @media (min-width: 768px){
+        width: 50%;
+        border: 5px solid;
+        position: absolute;
+        top: -15%;
+        transform: translate(-50%, 50%);
+        padding: 10px;
+  }
+}
+
+.c-form-block--edit-password-category{
+   
+    // width: 80%;
+    // border: 5px solid;
+    // border-radius: 10%;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, 50%);
+    // padding: 10px;
+        width: 100%;
+    border: 5px solid;
+    border-radius: 5%;
+    /* position: absolute; */
+    /* top: 50%; */
+    left: 50%;
+    /* transform: translate(-50%, 50%); */
+    padding: 10px;
+   @media (min-width: 768px){
+        width: 50%;
+        border: 5px solid;
+        position: absolute;
+        top: -15%;
+        transform: translate(-50%, 50%);
+        padding: 10px;
+  }
+}
+
+
+// .c-form-block--new-password-category-block{
+//     width: 100%;
+//     border: 5px solid;
+//     border-radius: 5%;
+//     left: 50%;
+//     padding: 10px;
+//    @media (min-width: 768px){
+//         width: 50%;
+//         border: 5px solid;
+//         position: absolute;
+//         top: -15%;
+//         transform: translate(-50%, 50%);
+//         padding: 10px;
+//   }
+// }
+
+// .c-form-block--edit-password-category-block{
+//       width: 100%;
+//     border: 5px solid;
+//     border-radius: 5%;
+//     left: 50%;
+//     padding: 10px;
+//    @media (min-width: 768px){
+//         width: 50%;
+//         border: 5px solid;
+//         position: absolute;
+//         top: -15%;
+//         transform: translate(-50%, 50%);
+//         padding: 10px;
+//   }
+// }
+.mr-auto{
+  margin-right: auto;
+}
+.mL-auto{
+  margin-left: auto;
+}
 
   .l-container{
     max-width:1200px;

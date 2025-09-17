@@ -20,7 +20,8 @@
                             </nav>
                             <ul class="flex flex-col">
                                 @foreach ($passwords as $item)
-                                <li class="flex flex-row | gap-12 | justify-center align-items-center"> <a href="">{{ $item->website }}</a>
+                                <li class="flex flex-row | gap-12 | justify-center align-items-center my-12"> 
+                                    <span class="mr-auto">{{ $item->website }}</span>
                                     <a class="btn btn-blue" href="/editpassword/{{$item->id}}">Edit</a>
                                     <a class="btn btn-grey" href="/password/{{$item->id}}">Read</a>
                                     {{-- <button form="delete-form" class="text-sm-6 text-red-500 font-bold ">Delete</button> --}}
@@ -43,7 +44,8 @@
                             <ul>
                                 @foreach($categories as $category)
 
-                                <li class="my-12 "><a href="">{{ $category->title  }}</a>
+                                <li class="flex flex-row | gap-12 | justify-center align-items-center my-12">
+                                    <span class="mr-auto">{{ $category->title  }}</span>
                                     <a class="btn btn-grey" href="/category/edit/{{$category->id}}">Edit</a>
                                     {{-- <button form="delete-form" class="text-sm-6 text-red-500 font-bold ">Delete</button> --}}
 
