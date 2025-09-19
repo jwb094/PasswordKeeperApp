@@ -7,190 +7,157 @@
 @use "buttons";
 @use "input";
 
-.c-form-block{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-
+.c-form-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
 
     height: unset;
     margin-top: 0;
     margin-bottom: 0;
-     @media (min-width: 768px) {
-      height: initial;
-      margin-top: unset;
-      margin-bottom: unset;
-     }
-  
+    @media (min-width: 768px) {
+        height: initial;
+        margin-top: unset;
+        margin-bottom: unset;
+    }
 
- @media (min-width: 768px) {
-    // margin: 25% auto;
-    height: auto;
-    width:auto;
-  }
-  &--edit-pwd,&--edit-pwdcat{
-      margin: 25% auto;
-      align-items: unset;
-      @media (min-width: 768px) {
-        height: 75%;
-        width: 500px;
-      }
-  }
+    @media (min-width: 768px) {
+        height: auto;
+        width: auto;
+    }
 
-  &--read-pwd{
-    height: 70%;
-     @media (min-width: 768px) {
-      
-     }
-  }
-
+    // &--new-password,
+    // &--edit-password,
+    // &--new-password-category,
+    // &--edit-password-category,
+    // &--new-password-category-block,
+    // &--edit-password-category-block {
+    //     width: 100%;
+    //     border: 5px solid;
+    //     border-radius: 5%;
+    //     left: 50%;
+    //     padding: 10px;
+    //     @media (min-width: 768px) {
+    //         width: 50%;
+    //         border: 5px solid;
+    //         position: absolute;
+    //         top: -15%;
+    //         transform: translate(-50%, 50%);
+    //         padding: 10px;
+    //     }
+    // }
 }
 
-
-.c-form-block--login{
- 
-    // width: 80%;
-    // border: 5px solid;
-    // border-radius: 10%;
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, 50%);
-    // padding: 10px;
-        width: 100%;
-    border: 5px solid;
-    border-radius: 5%;
-    /* position: absolute; */
-    /* top: 50%; */
-    left: 50%;
-    /* transform: translate(-50%, 50%); */
-    padding: 10px;
-   @media (min-width: 768px){
-      width: 50%;
-      border: 5px solid;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, 50%);
-      padding: 10px; 
-  }
-}
-
-.c-form-block--register{
- 
-    // width: 80%;
-    // border: 5px solid;
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, 50%);
-    // padding: 10px;
+.c-form-block--login {
     width: 100%;
     border: 5px solid;
-    /* position: absolute; */
+    border-radius: 5%;
+    left: 50%;
+    padding: 10px;
+    @media (min-width: 768px) {
+        width: 50%;
+        border: 5px solid;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        padding: 10px;
+    }
+}
+
+.c-form-block--register {
+    width: 100%;
+    border: 5px solid;
     top: 50%;
     left: 50%;
-    /* transform: translate(-50%, 50%); */
     padding: 10px;
-   @media (min-width: 768px){
-      width: 50%;
-      border: 5px solid;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 10px; 
-  }
-}
-
-.c-form-block--new-password{
-   
-    // width: 80%;
-    // border: 5px solid;
-    // border-radius: 10%;
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, 50%);
-    // padding: 10px;
-        width: 100%;
-    border: 5px solid;
-    border-radius: 5%;
-    /* position: absolute; */
-    /* top: 50%; */
-    left: 50%;
-    /* transform: translate(-50%, 50%); */
-    padding: 10px;
-   @media (min-width: 768px){
+    @media (min-width: 768px) {
         width: 50%;
         border: 5px solid;
         position: absolute;
-        top: -15%;
-        transform: translate(-50%, 50%);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         padding: 10px;
-  }
+    }
 }
-.c-form-block--edit-password{
-  
+
+.c-form-block--new-password {
     width: 100%;
     border: 5px solid;
     border-radius: 5%;
     left: 50%;
     padding: 10px;
-   @media (min-width: 768px){
+    @media (min-width: 768px) {
         width: 50%;
         border: 5px solid;
         position: absolute;
         top: -15%;
         transform: translate(-50%, 50%);
         padding: 10px;
-  }
+    }
 }
 
-.c-form-block--new-password-category{
-   
-
-        width: 100%;
+.c-form-block--edit-password {
+    width: 100%;
     border: 5px solid;
     border-radius: 5%;
-    /* position: absolute; */
-    /* top: 50%; */
     left: 50%;
-    /* transform: translate(-50%, 50%); */
     padding: 10px;
-   @media (min-width: 768px){
+    @media (min-width: 768px) {
         width: 50%;
         border: 5px solid;
         position: absolute;
         top: -15%;
         transform: translate(-50%, 50%);
         padding: 10px;
-  }
+    }
 }
 
-.c-form-block--edit-password-category{
-   
-    // width: 80%;
+.c-form-block--new-password-category {
+    width: 100%;
+    border: 5px solid;
+    border-radius: 5%;
+    left: 50%;
+    padding: 10px;
+    @media (min-width: 768px) {
+        width: 50%;
+        border: 5px solid;
+        position: absolute;
+        top: -15%;
+        transform: translate(-50%, 50%);
+        padding: 10px;
+    }
+}
+
+.c-form-block--edit-password-category {
+    width: 100%;
+    border: 5px solid;
+    border-radius: 5%;
+    left: 50%;
+    padding: 10px;
+    @media (min-width: 768px) {
+        width: 50%;
+        border: 5px solid;
+        position: absolute;
+        top: -15%;
+        transform: translate(-50%, 50%);
+        padding: 10px;
+    }
+}
+
+
+.c-form-block--new-password--block{
+    width: 100%;
     // border: 5px solid;
-    // border-radius: 10%;
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, 50%);
-    // padding: 10px;
-        width: 100%;
-    border: 5px solid;
     border-radius: 5%;
-    /* position: absolute; */
-    /* top: 50%; */
     left: 50%;
-    /* transform: translate(-50%, 50%); */
     padding: 10px;
    @media (min-width: 768px){
-        width: 50%;
+        // width: 50%;
         border: 5px solid;
         position: absolute;
         top: -15%;
@@ -199,54 +166,53 @@
   }
 }
 
-
-// .c-form-block--new-password-category-block{
-//     width: 100%;
-//     border: 5px solid;
-//     border-radius: 5%;
-//     left: 50%;
-//     padding: 10px;
-//    @media (min-width: 768px){
-//         width: 50%;
-//         border: 5px solid;
-//         position: absolute;
-//         top: -15%;
-//         transform: translate(-50%, 50%);
-//         padding: 10px;
-//   }
-// }
-
-// .c-form-block--edit-password-category-block{
-//       width: 100%;
-//     border: 5px solid;
-//     border-radius: 5%;
-//     left: 50%;
-//     padding: 10px;
-//    @media (min-width: 768px){
-//         width: 50%;
-//         border: 5px solid;
-//         position: absolute;
-//         top: -15%;
-//         transform: translate(-50%, 50%);
-//         padding: 10px;
-//   }
-// }
-.mr-auto{
-  margin-right: auto;
-}
-.mL-auto{
-  margin-left: auto;
-}
-
-  .l-container{
-    max-width:1200px;
-    margin:0 auto;
-    padding-left:2rem;
-    padding-right:2rem;
+.c-form-block--new-password-category-block{
+    width: 100%;
+    // border: 5px solid;
+    border-radius: 5%;
+    left: 50%;
+    padding: 10px;
+   @media (min-width: 768px){
+        // width: 50%;
+        border: 5px solid;
+        position: absolute;
+        top: -15%;
+        transform: translate(-50%, 50%);
+        padding: 10px;
   }
+}
 
-  footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+.c-form-block--edit-password-category-block{
+      width: 100%;
+    // border: 5px solid;
+    border-radius: 5%;
+    left: 50%;
+    padding: 10px;
+   @media (min-width: 768px){
+        // width: 50%;
+        border: 5px solid;
+        position: absolute;
+        top: -15%;
+        transform: translate(-50%, 50%);
+        padding: 10px;
+  }
+}
+.mr-auto {
+    margin-right: auto;
+}
+.mL-auto {
+    margin-left: auto;
+}
+
+.l-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

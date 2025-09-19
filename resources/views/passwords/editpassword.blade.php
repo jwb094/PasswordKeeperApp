@@ -44,7 +44,7 @@
                         <x-form-label for="password" class="form-label">Additional Notes</x-form-label>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-12 | mb-12">
+                <div class="col-xs-12 col-md-12 | mb-12  | flex justify-content-evenly ">
                     <a class="btn btn-grey" href="/dashboard">Cancel</a>
                     <x-form-button type="submit" class="btn btn-green">Submit</x-form-button>
                 </div>

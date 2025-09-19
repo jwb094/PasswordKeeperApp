@@ -1,36 +1,54 @@
 @extends('layout')
-@section('title',' Read Password')
+@section('title',' New Password')
 @section('content')
+
 <div class="l-container">
-    <div class="row center-md md.h-100vh md.align-items-center">
-        <div class="c-form-block  | radius-lg border-black border-1">
-            <form action="" class="c-form-block--read-pwd w-full mx-auto my-56">
+@if($errors->any())
+    {{ implode('', $errors->all('message')) }}
+@endif
+</div>
+<div class="l-container">
+    <div class="row center-md flex justify-content-center">
+        <h2> Password</h2>
+    </div>
+</div>
+<div class="l-container">
+    <div class="row center-md">
+        <div class="c-form-block c-form-block--new-password-block  | radius-lg ">
+            <form action=""  class="c-form-block--new-password mx-auto my-96 ">
+                @csrf
                 <div class="col-xs-12 col-md-12 | my-12">
                     <div class="entryarea">
-                        <x-form-label for="website" class="form-label form-label--above | ">Website</x-form-label>
-                        <x-form-field type="text" class="mt-24 border-1 border-black border-solid" id="website" name="website" value="{{$data['website']}}" readonly></x-form-field>
+                        <x-form-field type="text" class="form-field  border-1 border-black border-solid" id="website" name="website" required></x-form-field>
+                        <x-form-label class="form-label" for="website"> Website</x-form-label>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-12 ">
+                <div class="col-xs-12 col-md-12 | my-12">
                     <div class="entryarea">
-                        <x-form-label for="username" class="form-label form-label--above">username</x-form-label>
-                        <x-form-field type="email" class="border-1 border-black border-solid" id="username" name="username" value="{{$data['username']}}" readonly></x-form-field>
+                        <x-form-field type="text" class="form-field border-1 border-black border-solid" id="username" name="username" required></x-form-field>
+                        <x-form-label class="form-label" for="username"> Username</x-form-label>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-12 ">
+                <div class="col-xs-12
+                            col-md-12
+                            | my-12">
                     <div class="entryarea">
-                        <x-form-label for="password" class="form-label form-label--above">Password</x-form-label>
-                        <x-form-field type="text" class="border-1 border-black border-solid" id="password" name="password" value="{{$data['password']}}" readonly></x-form-field>
+                        <x-form-field type="password" class="form-field border-1 border-black border-solid" id="password" name="password" required></x-form-field>
+                        <x-form-label for="password" class="form-label">Password</x-form-label>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-12 | my-24">
+                <div class="col-xs-12
+                            col-md-12
+                            | my-12">
                     <div class="entryarea">
-                        <x-form-label for="password" class="form-label form-label--above form-label--textarea-above ">Additional Notes</x-form-label>
-                        <x-form-textarea class="form-input border-1 border-black border-solid" id="notes" name="notes" rows="1" readonly>{{$data['notes']}}</x-form-textarea>
+                        <x-form-textarea class="form-field border-1 border-black border-solid" id="notes" name="notes" rows="2" placeholder=" " required
+                        ></x-form-textarea>
+                        <x-form-label for="notes" class="form-label">Additional Notes</x-form-label>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-12">
-                    <a href="/dashboard" class="btn btn-grey text-sm/6 font-semibold text-white-900">Back</a>
+                <div class="col-xs-12 col-md-12 | flex justify-content-evenly ">
+                      <a class="btn btn-grey" href="/dashboard">Cancel</a>
+                    <button type="submit" class="btn btn-green">Submit</button>
                 </div>
             </form>
         </div>

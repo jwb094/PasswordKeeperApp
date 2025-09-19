@@ -24,11 +24,13 @@ textarea.form-field:empty{
 
 .form-label{
      position: absolute;
-    font-size: 1.6em;
+    font-size: 1em;
     padding: 0 25px;
     left: 0;
     top: -25%;
-
+    @media (min-width: 768px){
+          font-size: 1.6em;
+    }
     &--above{
         line-height: 30px;
         padding: 0 8px;

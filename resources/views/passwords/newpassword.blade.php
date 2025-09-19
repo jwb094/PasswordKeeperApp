@@ -14,7 +14,7 @@
 </div>
 <div class="l-container">
     <div class="row center-md">
-        <div class="c-form-block c-form-block--newpassword-block  | radius-lg ">
+        <div class="c-form-block c-form-block--new-password-block  | radius-lg ">
             <form action="{{route('savepassword')}}" method="POST" class="c-form-block--new-password mx-auto my-96 ">
                 @csrf
                 <div class="col-xs-12 col-md-12 | my-12">
@@ -46,7 +46,8 @@
                         <x-form-label for="notes" class="form-label">Additional Notes</x-form-label>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-12">
+                <div class="col-xs-12 col-md-12 | flex justify-content-evenly ">
+                      <a class="btn btn-grey" href="/dashboard">Cancel</a>
                     <button type="submit" class="btn btn-green">Submit</button>
                 </div>
             </form>

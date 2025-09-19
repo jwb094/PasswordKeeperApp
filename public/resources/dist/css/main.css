@@ -34292,10 +34292,15 @@ textarea.form-field:invalid + .form-label textarea.form-field:empty {
 
 .form-label {
   position: absolute;
-  font-size: 1.6em;
+  font-size: 1em;
   padding: 0 25px;
   left: 0;
   top: -25%;
+}
+@media (min-width: 768px) {
+  .form-label {
+    font-size: 1.6em;
+  }
 }
 .form-label--above {
   line-height: 30px;
@@ -34362,27 +34367,12 @@ textarea.form-field:valid + .form-label {
     width: auto;
   }
 }
-.c-form-block--edit-pwd, .c-form-block--edit-pwdcat {
-  margin: 25% auto;
-  align-items: unset;
-}
-@media (min-width: 768px) {
-  .c-form-block--edit-pwd, .c-form-block--edit-pwdcat {
-    height: 75%;
-    width: 500px;
-  }
-}
-.c-form-block--read-pwd {
-  height: 70%;
-}
+
 .c-form-block--login {
   width: 100%;
   border: 5px solid;
   border-radius: 5%;
-  /* position: absolute; */
-  /* top: 50%; */
   left: 50%;
-  /* transform: translate(-50%, 50%); */
   padding: 10px;
 }
 @media (min-width: 768px) {
@@ -34400,10 +34390,8 @@ textarea.form-field:valid + .form-label {
 .c-form-block--register {
   width: 100%;
   border: 5px solid;
-  /* position: absolute; */
   top: 50%;
   left: 50%;
-  /* transform: translate(-50%, 50%); */
   padding: 10px;
 }
 @media (min-width: 768px) {
@@ -34422,10 +34410,7 @@ textarea.form-field:valid + .form-label {
   width: 100%;
   border: 5px solid;
   border-radius: 5%;
-  /* position: absolute; */
-  /* top: 50%; */
   left: 50%;
-  /* transform: translate(-50%, 50%); */
   padding: 10px;
 }
 @media (min-width: 768px) {
@@ -34461,10 +34446,7 @@ textarea.form-field:valid + .form-label {
   width: 100%;
   border: 5px solid;
   border-radius: 5%;
-  /* position: absolute; */
-  /* top: 50%; */
   left: 50%;
-  /* transform: translate(-50%, 50%); */
   padding: 10px;
 }
 @media (min-width: 768px) {
@@ -34482,15 +34464,60 @@ textarea.form-field:valid + .form-label {
   width: 100%;
   border: 5px solid;
   border-radius: 5%;
-  /* position: absolute; */
-  /* top: 50%; */
   left: 50%;
-  /* transform: translate(-50%, 50%); */
   padding: 10px;
 }
 @media (min-width: 768px) {
   .c-form-block--edit-password-category {
     width: 50%;
+    border: 5px solid;
+    position: absolute;
+    top: -15%;
+    transform: translate(-50%, 50%);
+    padding: 10px;
+  }
+}
+
+.c-form-block--new-password--block {
+  width: 100%;
+  border-radius: 5%;
+  left: 50%;
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  .c-form-block--new-password--block {
+    border: 5px solid;
+    position: absolute;
+    top: -15%;
+    transform: translate(-50%, 50%);
+    padding: 10px;
+  }
+}
+
+.c-form-block--new-password-category-block {
+  width: 100%;
+  border-radius: 5%;
+  left: 50%;
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  .c-form-block--new-password-category-block {
+    border: 5px solid;
+    position: absolute;
+    top: -15%;
+    transform: translate(-50%, 50%);
+    padding: 10px;
+  }
+}
+
+.c-form-block--edit-password-category-block {
+  width: 100%;
+  border-radius: 5%;
+  left: 50%;
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  .c-form-block--edit-password-category-block {
     border: 5px solid;
     position: absolute;
     top: -15%;
