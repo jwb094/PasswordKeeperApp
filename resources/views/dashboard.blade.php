@@ -47,6 +47,7 @@
                                 <li class="flex flex-row | gap-12 | justify-center align-items-center my-12">
                                     <span class="mr-auto">{{ $category->title  }}</span>
                                     <a class="btn btn-grey" href="/category/edit/{{$category->id}}">Edit</a>
+                                        <a class="btn btn-blue" href="/category/{{$category->id}}">Read</a>
                                     {{-- <button form="delete-form" class="text-sm-6 text-red-500 font-bold ">Delete</button> --}}
 
                                     <form action="{{ route('categories.destroy', $category->id) }}" method="POST" style="display:inline;">

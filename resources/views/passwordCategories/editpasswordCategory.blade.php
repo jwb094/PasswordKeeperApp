@@ -22,7 +22,7 @@
                 </div>
                 <div class="col-xs-12 col-md-12 | my-48">
                     <div class="entryarea">
-                        <x-form-textarea class="form-field border-1 border-black border-solid" id="notes" name="notes" rows="1">{{$data->notes}}</x-form-textarea>
+                        <x-form-textarea class="form-field border-1 border-black border-solid" id="notes" name="notes" rows="1"> {{ $data->notes ?? '' }}</x-form-textarea>
                         <x-form-label for="password" class="form-label">Additional Notes</x-form-label>
                     </div>
                 </div>

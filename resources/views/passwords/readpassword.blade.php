@@ -19,13 +19,13 @@
                 @csrf
                 <div class="col-xs-12 col-md-12 | my-12">
                     <div class="entryarea">
-                        <x-form-field type="text" class="form-field  border-1 border-black border-solid" id="website" name="website" required></x-form-field>
+                        <x-form-field type="text" class="form-field  border-1 border-black border-solid" id="website" name="website" value="{{$data->website}}" required></x-form-field>
                         <x-form-label class="form-label" for="website"> Website</x-form-label>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-12 | my-12">
                     <div class="entryarea">
-                        <x-form-field type="text" class="form-field border-1 border-black border-solid" id="username" name="username" required></x-form-field>
+                        <x-form-field type="text" class="form-field border-1 border-black border-solid" id="username" name="username" value="{{$data->username}}" required></x-form-field>
                         <x-form-label class="form-label" for="username"> Username</x-form-label>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                             col-md-12
                             | my-12">
                     <div class="entryarea">
-                        <x-form-field type="password" class="form-field border-1 border-black border-solid" id="password" name="password" required></x-form-field>
+                        <x-form-field type="password" class="form-field border-1 border-black border-solid" id="password" name="password" value="{{$data->password}}" required></x-form-field>
                         <x-form-label for="password" class="form-label">Password</x-form-label>
                     </div>
                 </div>
@@ -42,13 +42,12 @@
                             | my-12">
                     <div class="entryarea">
                         <x-form-textarea class="form-field border-1 border-black border-solid" id="notes" name="notes" rows="2" placeholder=" " required
-                        ></x-form-textarea>
+                        >{{$data->notes}}</x-form-textarea>
                         <x-form-label for="notes" class="form-label">Additional Notes</x-form-label>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-12 | flex justify-content-evenly ">
                       <a class="btn btn-grey" href="/dashboard">Cancel</a>
-                    <button type="submit" class="btn btn-green">Submit</button>
                 </div>
             </form>
         </div>

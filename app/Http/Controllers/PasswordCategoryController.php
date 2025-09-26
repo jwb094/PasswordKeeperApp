@@ -13,16 +13,15 @@ class PasswordCategoryController extends Controller
     //
 
         // Show the form
-    public function showForm()
-        {
+    public function showForm(){
             $authManagerC = new AuthManager;
 
-            if ($authManagerC->hasAUserLoggedIn() === false) {
+        if ($authManagerC->hasAUserLoggedIn() === false) {
                 return  redirect(route('home'));
-            }
+        }
     
               return view('passwordCategories.newpasswordCategory');
-        }
+    }
 
 
         /**
@@ -47,12 +46,24 @@ class PasswordCategoryController extends Controller
         return view('passwordCategories.editpasswordCategory',["data"=>$data]);
     }
 
+    public function readData($id){
+        $authManagerC = new AuthManager;
+        if ($authManagerC->hasAUserLoggedIn() === false) {
+            return  redirect(route('home'));
+        }
+        
+        $PasswordsM = new PasswordCategories();
+        $selectedPassword = $PasswordsM->findRecord($id);
+        $data  = $selectedPassword;
+        //dd($data);
+        return view('passwordCategories.readpasswordCategory',["data"=>$data]);
+    }
 
-      /**
+    /**
      * Summary of updatepassword
      * @param mixed $id
      * @return void
-     */
+    */
     public function updatepassword($id,Request $request){
 
         $PasswordsM = new PasswordCategories();
@@ -76,7 +87,7 @@ class PasswordCategoryController extends Controller
     }
 
 
-        /**
+    /**
      * Summary of savePasswordcat
      * @return void
      */
